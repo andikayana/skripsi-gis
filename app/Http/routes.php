@@ -20,6 +20,10 @@ Route::get('tabel-sekolah',[
     'uses'  => 'kontrolSekolah@tabel',
     'as'    => 'tabel.sekolah'
 ]);
+Route::get('gmaps/{npsn}',[
+    'uses'  => 'kontrolSekolah@gmapsTes',
+    'as'    => 'gmaps.tes'
+])->where('npsn','[0-9]+');
 
 Route::get('peta-sekolah/jenjang/{jenjang}',[
     'uses'  => 'kontrolSekolah@peta',
@@ -30,9 +34,12 @@ Route::get('peta-sekolah/jenjang/{jenjang}/kecamatan/{kecamatan}',[
 Route::get('sekolah/{npsn}/lokasi',[
     'uses'  => 'kontrolSekolah@mapsSingle',
     'as'    => 'map.sekolah'])->where('npsn','[0-9]+');
+//Route::get('sekolah/{npsn}/lokasi/arahkan',[
+//    'uses'  => 'kontrolSekolah@mapsSingle',
+//    'as'    => 'map.sekolah.arahkan'])->where('npsn','[0-9]+');
 Route::get('sekolah/{npsn}/lokasi/arahkan',[
-    'uses'  => 'kontrolSekolah@mapsSingle',
-    'as'    => 'map.sekolah.arahkan'])->where('npsn','[0-9]+');
+    'uses'  => 'kontrolSekolah@gmapsTes',
+    'as'    => 'gmaps.tes'])->where('npsn','[0-9]+');
 
 Route::group(['middleware' => ['web']],function(){
     Route::post('masuk',[

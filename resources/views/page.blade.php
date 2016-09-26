@@ -18,6 +18,11 @@
 	</div>
 	<div class="section white">
 		<div class="container">
+			<div class="row">
+				<div class="col s12 center">
+
+				</div>
+			</div>
 			<p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper erat lectus. Integer dui libero, pellentesque in semper sed, gravida non ante. Curabitur aliquet porta placerat. Nullam consectetur venenatis neque nec sagittis. In pretium dolor metus, at auctor arcu finibus et. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec placerat felis. Vivamus porta laoreet tortor, vel tempor tortor mollis eget. Etiam ac purus tempor, viverra lectus vel, ultrices mi.
 
 				Donec vestibulum dolor ac ex pellentesque, quis laoreet neque dapibus. In hac habitasse platea dictumst. Vivamus porta ex lacus, et vulputate nulla cursus quis. Phasellus sed neque id turpis vestibulum finibus nec et justo. Vivamus sed nulla id est tempus elementum pellentesque ut velit. Etiam vel sapien quis felis fringilla tempus consequat in nibh. Praesent in odio eget massa malesuada vehicula. Fusce vitae ante nec diam hendrerit congue eget eu augue. Praesent mauris elit, consequat eget sem quis, viverra venenatis eros. Pellentesque mattis fringilla lectus in pellentesque.

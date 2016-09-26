@@ -45,7 +45,7 @@
     <!--^^^^^^^^^^^^^^^^^^^^^^^^^-->
 
     <!--fixed button back-->
-        <div id="fab_distribution" class="fixed-action-btn" style="bottom: 0px; left: 10px; right:80%">
+        {{--<div id="fab_distribution" class="fixed-action-btn" style="bottom: 0px; left: 10px; right:80%">--}}
         <div id="fab_distribution" class="fixed-action-btn-cus">
             <div class="row">
                 <div class="card-panel red" style="height:60px;">
@@ -99,7 +99,7 @@
                     }).addTo(mymap);
                 }
             }
-            function popupContent(nama, alamat, latitude, longitude) {
+            function popupContent(nama, alamat, latitude, longitude,npsn) {
                 pc = "<h5 class='teal-text center'>" + nama + "</h5><p>" + alamat + "</p>" +
                         "<center><img style='height: 100px; width: 100px;' src='"+window.location.protocol + "//" + window.location.host + "/bismillah/"+gambar+"'></center>"+
                         "<table class='centered bordered'>"+
@@ -116,7 +116,8 @@
                         "</tr>" +
                         "</tbody>" +
                         "</table>"+
-                        "<br><center><a class='waves-effect white-text waves-light center green btn-flat' onclick='menuju("+latitude+","+longitude+");'>Arahkan</a></center>";
+//                        "<br><center><a class='waves-effect white-text waves-light center green btn-flat' onclick='menuju("+latitude+","+longitude+");'>Arahkan</a></center>";
+                        "<br><center><a class='waves-effect white-text waves-light center green btn-flat' onclick='direct("+npsn+");'>Arahkan</a></center>";
                 return pc;
             }
             function onLocationError(e) {
@@ -208,7 +209,8 @@
                     menuju(lokasi['latitude'],lokasi['longitude']);
                 }else{
                     marker = L.marker([parseFloat(lokasi['latitude']), parseFloat(lokasi['longitude'])]).addTo(mymap)
-                            .bindPopup(popupContent(lokasi['nama'],lokasi['alamat'],lokasi['latitude'],lokasi['longitude']),customOptions).openPopup();
+//                            .bindPopup(popupContent(lokasi['nama'],lokasi['alamat'],lokasi['latitude'],lokasi['longitude']),customOptions).openPopup();
+                            .bindPopup(popupContent(lokasi['nama'],lokasi['alamat'],lokasi['latitude'],lokasi['longitude'],lokasi['npsn']),customOptions).openPopup();
                 }
 
             }

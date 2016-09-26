@@ -33,7 +33,7 @@
                         </div>
                     </div>
                 @endif
-                <table class="highlight">
+                <table class="highlight responsive">
                     <thead>
                     <tr>
                         <th data-field="id">NPSN</th>

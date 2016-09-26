@@ -103,6 +103,24 @@ class kontrolSekolah extends Controller
         ]);
         return view('beranda',compact(['tipe','lang','keterangan','jenjang','kec','kecamatan','selkec']));
     }
+    /*
+     *  google maps area
+     *
+     */
+    public function gmapsTes($npsn)
+    {
+        $sekolah    = Sekolah::where('npsn',$npsn)->first();
+        $namarute   = Route::currentRouteName();
+        $gambar     = $sekolah->gambar ? $sekolah->gambar->path.$sekolah->gambar->filename: 'undefined';
+//        dd($gambar);
+        $arahkan    = $namarute === "map.sekolah.arahkan" ? true : false ;
+        JavaScript::put([
+            'lokasi'    => $sekolah,
+            'gambar'    => $gambar,
+        ]);
+        return view('gmaps.direction', compact(['sekolah']));
+    }
+
     public function mapsSingle($npsn){
         $sekolah    = Sekolah::where('npsn',$npsn)->first();
         $tipe       = 'SMA';
@@ -231,4 +249,7 @@ class kontrolSekolah extends Controller
 //            return redirect()->route('admin.home');
         }
     }
+
+
+
 }

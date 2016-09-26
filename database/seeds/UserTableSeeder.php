@@ -38,6 +38,6 @@ class UserTableSeeder extends Seeder
                 'ip_addr'			=> '127.221.222'
             )
         );
-		DB::table('users')->insert($admin);
+		DB::table('admin')->insert($admin);
     }
 }
