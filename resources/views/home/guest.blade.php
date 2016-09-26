@@ -51,6 +51,8 @@
                             <td>{{$dataSM->alamat}}</td>
                             <td>{{$dataSM->jenjang}}</td>
                             <td>{{$dataSM->kecamatan->nama}}</td>
+                            <td>{{$dataSM->kecamatan->nama}}</td>
+                            <td>{{$dataSM->psgrade->15low}}</td>
                             <td><a href="{{ route('map.sekolah',['npsn'=>$dataSM->npsn])}}" class="waves-effect waves-light btn green black-text">peta</a></td>
                         </tr>
                         {{--@if(\Auth::check())--}}
